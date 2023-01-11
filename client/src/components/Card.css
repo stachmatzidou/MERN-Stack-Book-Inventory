@@ -1,0 +1,17 @@
+.card button {
+    padding: 0.5rem 1rem;
+    border: none;
+    color: #FFF;
+}
+
+button.read {
+    background-color: #007000;
+}
+
+button.notRead {
+    background-color: #ec3f00;
+}
+
+button.remove {
+    background-color: #cd0000;
+}

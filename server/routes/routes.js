@@ -25,15 +25,6 @@ router.post("/", (req, res) => {
     });
 });
 
-// router.put("/:id", (req, res) => {
-//     Book.findOneAndUpdate({
-//         _id : req.params.id
-//     }, req.body, {new: true}, (error, doc) => {
-//         if (error) console.log(error);
-//         res.json(doc);
-//     });
-// });
-
 router.put("/:id", (req, res) => {
     Book.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, doc) => {
         if (error) console.log(error);
