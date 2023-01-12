@@ -13,7 +13,7 @@ const BookList = ({ bookList, updateStatus, removeBook }) => {
             />
         );
     });
-    return <div className="bookList">{list}</div>;
+    return <main className="bookList">{list}</main>;
 };
 
 export default BookList;

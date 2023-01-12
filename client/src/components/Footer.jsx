@@ -3,7 +3,7 @@ import "./Footer.css"
 
 const Footer = ({length}) => {
     return (
-        <div>{`${length} Books in Inventory`}</div>
+        <footer className="footer">{`${length} Books in Inventory`}</footer>
     )
 };
 

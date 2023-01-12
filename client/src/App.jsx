@@ -37,8 +37,7 @@ function App() {
     };
 
     return (
-        <div className="App">
-            <h1 className="title">My Book Inventory</h1>
+        <div className="app">
             <AddBook addBook={addBook} />
             <BookList
                 bookList={bookList}
