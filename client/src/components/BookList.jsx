@@ -12,7 +12,7 @@ const BookList = ({ bookList, updateStatus, removeBook }) => {
                 removeBook={removeBook}
             />
         );
-    });
+    }).reverse();
     return <main className="bookList">{list}</main>;
 };
 
