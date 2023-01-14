@@ -37,8 +37,7 @@ const updateBook = async (req, res) => {
 
 const deleteBook = async (req, res) => {
     try {
-        const book = await Book.findById(req.params.id);
-        await Book.findByIdAndDelete(req.params.id);
+        const book = await Book.findByIdAndDelete(req.params.id);
         res.json(book);
     } catch (error) {
         console.log(error);
