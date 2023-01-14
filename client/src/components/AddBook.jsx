@@ -60,7 +60,8 @@ const AddBook = ({ addBook }) => {
                 <label className="label" htmlFor="pages">
                     Pages
                     <input
-                        type="number"
+                        type="text"
+                        maxLength={4}
                         id="pages"
                         placeholder="Add pages"
                         required
