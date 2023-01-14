@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import "./AddBook.css";
 
@@ -6,6 +6,7 @@ const AddBook = ({ addBook }) => {
     const [bookTitle, setBookTitle] = useState("");
     const [bookAuthor, setBookAuthor] = useState("");
     const [bookPages, setBookPages] = useState("");
+    const inputRef = useRef();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,6 +36,7 @@ const AddBook = ({ addBook }) => {
                     <input
                         maxLength={50}
                         autoFocus
+                        ref={inputRef}
                         type="text"
                         id="title"
                         placeholder="Add title"
@@ -60,8 +62,7 @@ const AddBook = ({ addBook }) => {
                 <label className="label" htmlFor="pages">
                     Pages
                     <input
-                        type="text"
-                        maxLength={4}
+                        type="number"
                         id="pages"
                         placeholder="Add pages"
                         required
@@ -69,7 +70,7 @@ const AddBook = ({ addBook }) => {
                         onChange={(e) => setBookPages(e.target.value)}
                     />
                 </label>
-                <button type="submit">Add Book</button>
+                <button type="submit" onClick={() => inputRef.current.focus()}>Add Book</button>
             </form>
         </header>
     );
